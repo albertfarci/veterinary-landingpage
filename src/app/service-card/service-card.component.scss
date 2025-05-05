@@ -1,0 +1,23 @@
+@import '../../styles/design-tokens.scss';
+
+.service-card {
+  background-color: #ffffff;
+  padding: 50px 40px 50px 40px;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-content {
+}
+
+.service-icon-left,
+.service-icon-right {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.service-button {
+  margin-top: 15px;
+}

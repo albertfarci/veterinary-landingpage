@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Navigazione principale">
+  <a class="navbar-brand ms-3" href="#">
+    <img src="assets/images/logo.png" alt="Logo della Dottoressa Erica Dore" class="img-fluid">
+  </a>
+  <button class="navbar-toggler me-3" type="button" (click)="onToggleSidebar()" aria-label="Apri menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item" [class.active]="isActive('/')" routerLinkActive="active">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" [class.active]="isActive('/chi-siamo')" routerLinkActive="active">
+        <a class="nav-link" routerLink="/chi-siamo">Chi Siamo</a>
+      </li>
+      <li class="nav-item" [class.active]="isActive('/servizi')" routerLinkActive="active">
+        <a class="nav-link" routerLink="/servizi">Servizi</a>
+      </li>
+      <li class="nav-item" [class.active]="isActive('/blog')" routerLinkActive="active">
+        <a class="nav-link" routerLink="/blog">Blog</a>
+      </li>
+      <li class="nav-item" [class.active]="isActive('/contattaci')" routerLinkActive="active">
+        <a class="nav-link" routerLink="/contattaci">Contattaci</a>
+      </li>
+    </ul>
+  </div>
+</nav>

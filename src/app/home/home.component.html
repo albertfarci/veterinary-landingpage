@@ -1,0 +1,19 @@
+<div class="container-fluid home-container" >
+  <div class="row">
+    <h2 class="home-title animate-fade-in">Benvenuti nel sito della Dottoressa Erica Dore: Dove Cani e Gatti trovano assistenza</h2>
+    <p class="home-text animate-fade-in">
+      Sappiamo quanto i nostri amici animali siano importanti per noi. Fanno parte della nostra famiglia e vogliamo offrire loro il miglior ambiente per tutta la loro vita. Qui a Casa Pet, ci impegniamo a fornire cure amorevoli e professionali per i nostri amici pelosi.
+    </p>
+    <img src="assets/images/Dimensions-Animals-Cats-European-Burmese-Cat-Poses.svg" alt="Descrizione dell'immagine">
+  </div>
+
+  <div class="row" id="serviceCards" style="visibility: hidden;">
+    <div class="col-md-6 col-sm-12" *ngFor="let service of services">
+      <app-service-card [service]="service"></app-service-card>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <img src="assets/images/Dimensions-Animals-Dogs-Weimaraner-Outlines.svg" alt="Descrizione dell'immagine">
+  </div>
+</div>

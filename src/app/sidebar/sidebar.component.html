@@ -1,0 +1,28 @@
+<div class="sidebar" [class.active]="isSidebarOpen" aria-label="Menu">
+  <button class="btn-close" (click)="onCloseSidebar()">×</button>
+  <div class="logo-container text-center mb-4">
+    <img src="assets/images/logo.png" alt="Logo della Dottoressa Erica Dore. Un cane e un gatto che sorridono insieme" class="img-fluid" >
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link" routerLink="/" [class.active]="isActive('/')" routerLinkActive="active" (click)="onCloseSidebar()" aria-label="Home">Home</a>
+    <a class="nav-link" routerLink="/chi-siamo" [class.active]="isActive('/chi-siamo')" routerLinkActive="active" (click)="onCloseSidebar()" aria-label="Chi siamo">Chi Siamo</a>
+    <div class="dropdown">
+      <a class="nav-link" (click)="toggleServicesMenu()">Servizi</a>
+      <div *ngIf="servicesMenuOpen" class="dropdown-content ml-2">
+        <a *ngFor="let service of services" routerLink="{{service.router}}" (click)="onSubServiceCloseSidebar()">{{service.title}}</a>
+      </div>
+    </div>
+    <!--<a class="nav-link" routerLink="/blog" [class.active]="isActive('/blog')" routerLinkActive="active" (click)="onCloseSidebar()" aria-label="Blog">Blog</a>
+    -->
+    <a class="nav-link" routerLink="/contattaci" [class.active]="isActive('/contattaci')" routerLinkActive="active" (click)="onCloseSidebar()" aria-label="Contattaci">Contattaci</a>
+  </nav>
+  
+  <div class="contatti-container mt-4">
+  <p><a href="tel:+393881243582">Chiama!</a></p> <!-- Numero di telefono -->
+  <p><a href="https://wa.me/3881243582">Scrivici su WhatsApp</a></p> <!-- Contatto WhatsApp -->
+  <p><a href="https://www.google.it/maps?q=40.66374424815787,%208.747262271421038">Vieni a trovarci</a></p> <!-- Indirizzo -->
+  </div>
+  
+
+</div>
+<div class="overlay" [class.active]="isSidebarOpen"></div> <!-- Aggiunto l'overlay -->

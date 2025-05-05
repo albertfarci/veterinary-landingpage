@@ -1,0 +1,131 @@
+@import './design-tokens';
+
+// Tipografia
+body {
+  font-family: $font-family-primary;
+  color: $color-text-primary;
+  font-size: $font-size-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-secondary;
+  color: $color-text-primary;
+}
+
+
+p {
+  color: $color-text-secondary;
+}
+
+// Layout
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-unit;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$spacing-unit / 2;
+}
+
+.col {
+  flex: 1;
+  padding: $spacing-unit / 2;
+}
+
+.mt-4 {
+  margin-top: $spacing-unit * 2;
+}
+
+.mb-4 {
+  margin-bottom: $spacing-unit * 2;
+}
+
+// Link
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($color-primary, 10%);
+  }
+}
+
+// Bottoni
+.btn-primary {
+  background-color: $color-primary;
+  color: #ffffff;
+  border: none;
+  padding: $spacing-unit / 2 $spacing-unit;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+// Bottoni
+.btn-outline-primary {
+  color: $color-primary;
+  padding: $spacing-unit / 2 $spacing-unit;
+  border-radius: $border-radius;
+  border-color: $color-primary;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $color-secondary;
+  color: #ffffff;
+  border: none;
+  padding: $spacing-unit / 2 $spacing-unit;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-secondary, 10%);
+  }
+}
+
+// Bottoni
+.btn-outline-secondary {
+  color: $color-secondary;
+  padding: $spacing-unit / 2 $spacing-unit;
+  border-radius: $border-radius;
+  border-color: $color-secondary;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-secondary, 10%);
+  }
+}
+// Card
+.card {
+  background-color: #ffffff;
+  border: 1px solid lighten($color-secondary, 30%);
+  border-radius: $border-radius * 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: $spacing-unit;
+  margin-bottom: $spacing-unit;
+
+  &-title {
+    font-family: $font-family-secondary;
+    font-size: $font-size-heading;
+    color: $color-primary;
+  }
+
+  &-text {
+    color: $color-text-secondary;
+  }
+}
